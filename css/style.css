@@ -1,0 +1,273 @@
+/* -----------------------------
+    Pin Name  : Simple Register Form
+    File Name : style.css
+    Date      : 23 DEC 2017
+    Author    : Alaa El sayed
+    Idea      : Jens Kreuter
+    URL       : (https://www.uplabs.com/posts/simple-register-form-interface)
+   -----------------------------*/
+
+/*
+    Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+/* 
+    Reset
+*/
+
+html,a,p,span,h1,h2{
+    margin: 0;
+    padding: 0;
+}
+/*
+    End Reset
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*
+    Counter
+*/
+
+.tophalf{
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cd,.day{          /* cntdwn & days */
+    display: inline-block;
+    margin-top: 120px;
+    position: absolute;
+    font-size: 22px;
+    color: #fff;
+}
+
+.cd{                /* cntdwn */
+    margin-left: -450px;
+}
+
+.cd::before{        /* left line */
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #9e9da4b0;
+    width: 150px;
+    margin: 15px 0 0 -170px ;
+}
+
+.day{               /* days */
+    margin-left: 400px; 
+}
+
+.day::after{        /* right line */
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #9e9da4b0;
+    width: 150px;
+    margin: 15px 0 0 20px ;
+}
+
+
+#counter{          /* Number */
+    font-size: 200px;
+    color: #fff;
+}
+
+/*
+    End Counter
+*/
+
+/*
+    Form
+*/
+
+.register{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.register h1{          /* Register Now */
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.register h1::after{   /* Line down */
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #9E9DA4;
+    width: 35px;
+    margin: 40px 0 0 -75px  
+}
+
+.form{                /* input and button */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.email{               /* Email input */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 220px;
+    border: 2px solid #FEFDFE;
+    border-radius: 20px 0 0 20px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    text-align: center;
+}
+
+.email::placeholder{
+    color: #9E9DA4;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.email:-moz-placeholder{     /* Placeholder for firefox*/
+    color: #9E9DA4;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.btn{               /* button */
+    margin-left: -4px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid #FEFDFE;
+    border-left: none;
+    background: #C2404C;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+    font-weight: 600;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.register h2{        /* soon available via */
+    text-align: center;
+    color: #fff;
+    font-size:12px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.register a img{    /* apple store download button (image) */
+    width:100px;
+    margin:0 auto;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 
+    End Form 
+*/
+
+/*
+    Responsive and media quary
+*/
+
+/* cntdwn (up) number & days (down) number */
+
+.cd-res,.day-res{
+    font-size: 22px;
+    color: #fff;
+    display: none;
+}
+
+.cd-res{
+    margin-bottom: -20px;
+}
+
+.day-res{
+    margin-top: -20px;
+}
+
+/* when device width 925 */
+
+@media screen and (max-width : 925px) {
+    .cd,.day,.cd::before,.day::after{
+        display: none;
+    }
+    
+    .cd-res,.day-res{
+        display: block;
+    }
+    
+    .register{
+        width: 80%
+    }
+    
+}
+
+/* when device width 460 */
+
+@media screen and (max-width : 460px) {
+    .email{
+        border-radius: 20px ;
+        margin-bottom: 5px;
+    }
+    
+    .btn{
+        width: 220px;
+        border-left: 2px solid #FEFDFE;
+        border-radius: 20px ;
+        margin-left: 0;
+    }
+    
+}
+
+/* when device width 330 */
+
+@media screen and (max-width : 330px) {
+    
+    .register{
+        padding: 5px
+    }
+    
+}
+
+/* when device width 300 */
+
+@media screen and (max-width : 300px) {
+    
+    .register{
+        padding: 3px
+    }
+    
+    .email{
+        width :200px
+    }
+    
+    .btn{
+        width: 200px;
+    }
+    
+}
